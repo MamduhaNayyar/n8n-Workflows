@@ -1,0 +1,77 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -400,
+        -48
+      ],
+      "id": "85e3e164-8044-469c-b184-42cd794de3fa",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "fromEmail": "nmamduha@gmail.com",
+        "toEmail": " fa24-bsse-081@se.lgu.edu.pk",
+        "subject": "helllooooo wassup",
+        "emailFormat": "text",
+        "text": "hello wassup",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        -192,
+        -48
+      ],
+      "id": "e297eead-2cda-4500-b95b-8348702a50fc",
+      "name": "Send an Email",
+      "webhookId": "617eb9af-37bc-4f7a-953e-2552e39352e9",
+      "credentials": {
+        "smtp": {
+          "id": "MKkj8gu06amED8Jm",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "b519a30f-ab93-4725-810e-edf9cbe3435e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "951b5841b85d5f13cd8319a637365bd287186f03dd179451edba1e45aa76d257"
+  },
+  "nodeGroups": [],
+  "id": "lz9vSS2V7pvyOpXk",
+  "tags": []
+}
